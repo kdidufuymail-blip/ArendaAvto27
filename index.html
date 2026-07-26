@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>АрендаАвто27 — Аренда авто в Хабаровске | Под такси, выкуп, прокат</title>
+  <meta name="description" content="АрендаАвто27 — аренда автомобилей в Хабаровске: под такси, аренда под выкуп, прокат. Авто без пробега по РФ, ОСАГО и ТО за наш счёт, приоритет в агрегаторах. Оставьте заявку — начнёте зарабатывать уже завтра." />
+  <meta name="theme-color" content="#07080c" />
+
+  <meta property="og:title" content="АрендаАвто27 — Аренда авто в Хабаровске" />
+  <meta property="og:description" content="Аренда, прокат, аренда под выкуп и под такси в Хабаровске. Авто без пробега по РФ, прозрачные условия." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="АрендаАвто27 — на главную">
+        <span class="logo__mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="" class="logo__img" width="38" height="38" />
+        </span>
+        <span class="logo__text">Аренда<span class="logo__text--accent">Авто27</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#requirements" class="nav__link">Условия</a>
+        <a href="#fleet" class="nav__link">Автопарк</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://api.whatsapp.com/send?phone=79142076094" target="_blank" rel="noopener" class="header__phone" aria-label="Написать в WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.256l-.999 3.648 3.969-1.001zm5.49-7.662c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="#contacts" class="btn btn--primary header__cta">Оставить заявку</a>
+      </div>
+
+      <button class="header__burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO (cinematic) ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <canvas class="hero__particles" id="particles"></canvas>
+      <div class="hero__grid"></div>
+      <div class="hero__car-bg" id="heroCarBg"></div>
+      <div class="hero__car-fade"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__scanlines"></div>
+      <div class="hero__vignette"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge reveal-hero" data-d="0">
+          <span class="hero__badge-dot"></span>
+          <span>Аренда авто · Хабаровск</span>
+        </div>
+
+        <h1 class="hero__title reveal-hero" data-d="120">
+          <span class="hero__title-line">Аренда авто</span>
+          <span class="hero__title-line">и <span class="text-accent">выкуп</span></span>
+          <span class="hero__title-line">в Хабаровске</span>
+        </h1>
+
+        <p class="hero__subtitle reveal-hero" data-d="260">
+          АрендаАвто27 — аренда, прокат, аренда под выкуп и под такси в Хабаровске.
+          Авто без пробега по РФ, ОСАГО и ТО за наш счёт, приоритет в агрегаторах.
+          Начните зарабатывать уже завтра.
+        </p>
+
+        <div class="hero__actions reveal-hero" data-d="380">
+          <a href="#contacts" class="btn btn--primary btn--lg">
+            <span>Оставить заявку</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#services" class="btn btn--ghost btn--lg">Узнать условия</a>
+        </div>
+
+        <div class="hero__stats reveal-hero" data-d="500">
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="5.0" data-decimals="1">5.0</div>
+            <div class="hero__stat-label">Рейтинг<br>на картах</div>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="8">0</div>
+            <div class="hero__stat-label">Авто<br>в парке</div>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <div class="hero__stat-num" data-count="15">0</div>
+            <div class="hero__stat-label">Минут<br>оформление</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#services" class="hero__scroll" aria-label="Листать вниз">
+      <span class="hero__scroll-text">Листай вниз</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============ RATING STRIP ============ -->
+  <section class="rating-strip" aria-label="Рейтинг компании">
+    <div class="container rating-strip__inner">
+      <div class="rating-strip__score">
+        <span class="rating-strip__num">5.0</span>
+        <span class="rating-strip__stars" aria-hidden="true">★★★★★</span>
+      </div>
+      <div class="rating-strip__sources">
+        <a href="https://yandex.ru/maps/-/CTfGzVoS" target="_blank" rel="noopener" class="rating-strip__source">
+          <span class="rating-strip__source-stars">★★★★★</span>
+          <span class="rating-strip__source-name">Яндекс Карты</span>
+        </a>
+        <span class="rating-strip__divider" aria-hidden="true"></span>
+        <a href="https://t.me/ArendaAvto_27" target="_blank" rel="noopener" class="rating-strip__source">
+          <span class="rating-strip__source-name">Telegram · @ArendaAvto_27</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADVANTAGES ============ -->
+  <section class="advantages section" id="advantages">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Почему мы</span>
+        <h2 class="section__title">Преимущества <span class="text-accent">АрендаАвто27</span></h2>
+        <p class="section__lead">Создаём условия, при которых водителю выгодно и спокойно работать.</p>
+      </div>
+
+      <div class="advantages__grid">
+        <article class="adv-card reveal">
+          <div class="adv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5a3 3 0 013-2h8a3 3 0 013 2l2 5v5a1 1 0 01-1 1h-1a2 2 0 01-2-2H8a2 2 0 01-2 2H5a1 1 0 01-1-1z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg>
+          </div>
+          <h3 class="adv-card__title">Авто без пробега по РФ</h3>
+          <p class="adv-card__text">Свежие автомобили из Японии. Чистый, технически исправный автопарк, регулярное ТО.</p>
+        </article>
+
+        <article class="adv-card reveal" data-d="80">
+          <div class="adv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3 class="adv-card__title">ТО и резина за наш счёт</h3>
+          <p class="adv-card__text">Техобслуживание, ремонт и сезонная резина берём на себя — вы только зарабатываете.</p>
+        </article>
+
+        <article class="adv-card reveal" data-d="160">
+          <div class="adv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="adv-card__title">ОСАГО и ОСГОП включены</h3>
+          <p class="adv-card__text">Все автомобили застрахованы. ОСАГО и ОСГОП оформляем за счёт компании.</p>
+        </article>
+
+        <article class="adv-card reveal" data-d="240">
+          <div class="adv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+          </div>
+          <h3 class="adv-card__title">Приоритет в агрегаторах</h3>
+          <p class="adv-card__text">Все авто имеют максимальный приоритет в службах заказа такси — больше заказов и заработка.</p>
+        </article>
+
+        <article class="adv-card reveal" data-d="320">
+          <div class="adv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+          </div>
+          <h3 class="adv-card__title">Поддержка водителей</h3>
+          <p class="adv-card__text">Реальные люди на связи. Помощь на дороге и по любым вопросам в течение дня.</p>
+        </article>
+
+        <article class="adv-card reveal" data-d="400">
+          <div class="adv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="adv-card__title">Быстрое оформление</h3>
+          <p class="adv-card__text">Заявка и выдача авто в день обращения. Подберём график смен под вас.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="rental section" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Услуги</span>
+        <h2 class="section__title">Наши <span class="text-accent">услуги</span></h2>
+        <p class="section__lead">Аренда, прокат, аренда под выкуп и под такси — выберите подходящий формат.</p>
+      </div>
+
+      <div class="rental__grid">
+        <div class="rental-card reveal">
+          <div class="rental-card__tag">Аренда</div>
+          <div class="rental-card__price">
+            <span class="rental-card__from">от</span>
+            <span class="rental-card__amount">1 500 ₽</span>
+            <span class="rental-card__unit">/ сутки</span>
+          </div>
+          <ul class="rental-card__list">
+            <li>Авто для личных поездок</li>
+            <li>Посуточно и на длительный срок</li>
+            <li>ТО и сезонная резина за наш счёт</li>
+            <li>ОСАГО включён</li>
+          </ul>
+          <a href="#contacts" class="btn btn--ghost rental-card__btn">Оставить заявку</a>
+        </div>
+
+        <div class="rental-card rental-card--featured reveal" data-d="80">
+          <div class="rental-card__tag rental-card__tag--featured">Под такси</div>
+          <div class="rental-card__price">
+            <span class="rental-card__from">от</span>
+            <span class="rental-card__amount">1 400 ₽</span>
+            <span class="rental-card__unit">/ сутки</span>
+          </div>
+          <ul class="rental-card__list">
+            <li>Максимальный приоритет в агрегаторах</li>
+            <li>ОСАГО и ОСГОП включены</li>
+            <li>Гибкий график смен</li>
+            <li>ТО, резина и замена при ремонте</li>
+            <li>Поддержка водителей на дороге</li>
+          </ul>
+          <a href="#contacts" class="btn btn--primary rental-card__btn">Оставить заявку</a>
+        </div>
+
+        <div class="rental-card reveal" data-d="160">
+          <div class="rental-card__tag">Прокат</div>
+          <div class="rental-card__price">
+            <span class="rental-card__from">от</span>
+            <span class="rental-card__amount">1 500 ₽</span>
+            <span class="rental-card__unit">/ сутки</span>
+          </div>
+          <ul class="rental-card__list">
+            <li>Краткосрочный прокат от суток</li>
+            <li>Поездки по городу и Хабаровскому краю</li>
+            <li>Чистое, исправное авто</li>
+            <li>Быстрое оформление</li>
+          </ul>
+          <a href="#contacts" class="btn btn--ghost rental-card__btn">Оставить заявку</a>
+        </div>
+      </div>
+
+      <div class="rental__note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01" stroke-linecap="round"/></svg>
+        <span>Точная стоимость зависит от модели авто и срока аренды — уточняйте при оформлении.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REQUIREMENTS ============ -->
+  <section class="requirements section" id="requirements">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Требования</span>
+        <h2 class="section__title">Простые <span class="text-accent">требования</span></h2>
+        <p class="section__lead">Чтобы взять авто в аренду, достаточно соответствовать четырём пунктам.</p>
+      </div>
+
+      <div class="requirements__grid">
+        <article class="req-card reveal">
+          <div class="req-card__num">01</div>
+          <h3 class="req-card__title">Возраст от 25 лет</h3>
+          <p class="req-card__text">Водитель должен быть старше 25 лет.</p>
+        </article>
+
+        <article class="req-card reveal" data-d="80">
+          <div class="req-card__num">02</div>
+          <h3 class="req-card__title">Стаж от 3 лет</h3>
+          <p class="req-card__text">Минимальный водительский стаж — 3 года.</p>
+        </article>
+
+        <article class="req-card reveal" data-d="160">
+          <div class="req-card__num">03</div>
+          <h3 class="req-card__title">Прописка Хабаровского края</h3>
+          <p class="req-card__text">Необходима постоянная прописка в Хабаровском крае.</p>
+        </article>
+
+        <article class="req-card reveal" data-d="240">
+          <div class="req-card__num">04</div>
+          <h3 class="req-card__title">Залог 10 000 ₽</h3>
+          <p class="req-card__text">Залог 10 000 ₽ + оплата за 3 дня вперёд.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLEET ============ -->
+  <section class="fleet section" id="fleet">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Автопарк</span>
+        <h2 class="section__title">Наш <span class="text-accent">автопарк</span></h2>
+        <p class="section__lead">Автомобили в наличии. Цены указаны за сутки. Для брони — оставьте заявку.</p>
+      </div>
+
+      <div class="fleet__grid fleet__grid--cards">
+        <article class="car-card reveal">
+          <div class="car-card__media">
+            <img src="assets/toyota-prius-2019.jpg" alt="Toyota Prius 2019 г., без пробега по РФ" loading="lazy" />
+            <span class="car-card__badge car-card__badge--hit">Хит</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Toyota Prius</h3>
+            <span class="car-card__year">2019 г. · без пробега по РФ</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.8 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Хэтчбек</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~4 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">2 400 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="80">
+          <div class="car-card__media">
+            <img src="assets/honda-stepwgn-2015.jpg" alt="Honda STEPWGN 2015 г., без пробега по РФ" loading="lazy" />
+            <span class="car-card__badge car-card__badge--hit">Минивэн</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Honda STEPWGN</h3>
+            <span class="car-card__year">2015 г. · без пробега по РФ</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">2.0 бензин</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Минивэн 7 мест</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~8 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">2 500 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="160">
+          <div class="car-card__media">
+            <img src="assets/honda-shuttle-2019.jpeg" alt="Honda Shuttle 2019 г., рестайлинг" loading="lazy" />
+            <span class="car-card__badge car-card__badge--hit">Хит</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Honda Shuttle</h3>
+            <span class="car-card__year">2019 г. · рестайлинг</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.5 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Универсал</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~4.5 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">2 000 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="240">
+          <div class="car-card__media">
+            <img src="assets/honda-fit-2022.png" alt="Honda Fit 2022 г., без пробега по РФ" loading="lazy" />
+            <span class="car-card__badge">В наличии</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Honda Fit</h3>
+            <span class="car-card__year">2022 г. · без пробега по РФ</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.3 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Хэтчбек</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~3.8 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">1 700 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="320">
+          <div class="car-card__media">
+            <img src="assets/toyota-prius-2012.jpg" alt="Toyota Prius 2012 г." loading="lazy" />
+            <span class="car-card__badge">В наличии</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Toyota Prius</h3>
+            <span class="car-card__year">2012 г.</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.8 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Хэтчбек</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~4.5 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">1 700 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="400">
+          <div class="car-card__media">
+            <img src="assets/honda-insight-2014.jpg" alt="Honda Insight 2014 г., без пробега по РФ" loading="lazy" />
+            <span class="car-card__badge">В наличии</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Honda Insight</h3>
+            <span class="car-card__year">2014 г. · без пробега по РФ</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.3 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Хэтчбек</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~4.3 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">1 600 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="480">
+          <div class="car-card__media">
+            <img src="assets/honda-fit-shuttle-2014.png" alt="Honda Fit Shuttle 2014 г." loading="lazy" />
+            <span class="car-card__badge">В наличии</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Honda Fit Shuttle</h3>
+            <span class="car-card__year">2014 г.</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.5 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Универсал</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~4.5 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">1 600 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card reveal" data-d="560">
+          <div class="car-card__media">
+            <img src="assets/honda-insight-2010.jpg" alt="Honda Insight 2010 г." loading="lazy" />
+            <span class="car-card__badge">В наличии</span>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__title">Honda Insight</h3>
+            <span class="car-card__year">2010 г.</span>
+            <ul class="car-card__specs">
+              <li><span class="car-card__spec-label">Двигатель</span><span class="car-card__spec-val">1.3 гибрид</span></li>
+              <li><span class="car-card__spec-label">КПП</span><span class="car-card__spec-val">АКПП</span></li>
+              <li><span class="car-card__spec-label">Привод</span><span class="car-card__spec-val">Передний</span></li>
+              <li><span class="car-card__spec-label">Кузов</span><span class="car-card__spec-val">Хэтчбек</span></li>
+              <li><span class="car-card__spec-label">Расход</span><span class="car-card__spec-val">~4.5 л/100км</span></li>
+            </ul>
+            <div class="car-card__price">
+              <span class="car-card__price-main">1 600 ₽<small>/ сутки</small></span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="fleet__cta-wrap reveal">
+        <a href="#contacts" class="btn btn--primary btn--lg">Забронировать авто</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUYOUT BANNER ============ -->
+  <section class="buyout" id="buyout">
+    <div class="container">
+      <div class="buyout__card reveal">
+        <div class="buyout__content">
+          <span class="section__eyebrow">Выкуп авто</span>
+          <h2 class="buyout__title">Подберём любой автомобиль под <span class="text-accent">ВЫКУП</span></h2>
+          <p class="buyout__text">
+            Можем приобрести любой автомобиль под ваши параметры. Для Вас — под выкуп.
+            Отдельный Telegram-канал для подбора авто под покупку.
+          </p>
+          <ul class="buyout__list">
+            <li>Любая марка и модель под ваши параметры</li>
+            <li>Подбор авто из Японии под выкуп</li>
+            <li>Отдельный менеджер по выкупу</li>
+          </ul>
+          <a href="https://t.me/AVTOIMPORT27" target="_blank" rel="noopener" class="btn btn--primary btn--lg buyout__btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7L17.7 6c.3-.3-.1-.4-.5-.2L7.5 12.4l-4.5-1.4c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.1 1.6z"/></svg>
+            <span>Telegram</span>
+          </a>
+        </div>
+        <div class="buyout__visual" aria-hidden="true">
+          <div class="buyout__glow"></div>
+          <svg class="buyout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5a3 3 0 013-2h8a3 3 0 013 2l2 5v5a1 1 0 01-1 1h-1a2 2 0 01-2-2H8a2 2 0 01-2 2H5a1 1 0 01-1-1z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/><path d="M19 8l1.5-3M5 8L3.5 5"/></svg>
+          <span class="buyout__tag">Аренда под выкуп · Выкуп авто</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews section" id="reviews" aria-label="Отзывы клиентов">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Отзывы</span>
+        <h2 class="section__title">Что говорят <span class="text-accent">водители</span></h2>
+        <p class="section__lead">Реальные отзывы с Яндекс Карт и Telegram. Средняя оценка — 5.0</p>
+      </div>
+    </div>
+
+    <div class="reviews__marquee" aria-hidden="false">
+      <div class="reviews__track" id="reviewsTrack"></div>
+    </div>
+
+    <div class="container">
+      <div class="reviews__summary reveal">
+        <div class="reviews__summary-score">
+          <span class="reviews__summary-num">5.0</span>
+          <span class="reviews__summary-stars" aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="reviews__summary-text">Средний рейтинг по всем площадкам: Яндекс Карты, Telegram.</p>
+        <div class="reviews__sources">
+          <a href="https://yandex.ru/maps/-/CTfGzVoS" target="_blank" rel="noopener" class="reviews__source-link">Яндекс Карты ↗</a>
+          <a href="https://t.me/ArendaAvto_27" target="_blank" rel="noopener" class="reviews__source-link">Telegram ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTS ============ -->
+  <section class="contacts section" id="contacts">
+    <div class="container">
+      <div class="contacts__card reveal">
+        <div class="contacts__info">
+          <span class="section__eyebrow">Контакты</span>
+          <h2 class="section__title section__title--left">Оставьте заявку — <span class="text-accent">перезвоним в течение дня</span></h2>
+          <p class="contacts__lead">Заполните форму или свяжитесь любым удобным способом. Ответим на все вопросы по аренде, прокату и выкупу авто.</p>
+
+          <div class="contacts__list">
+            <a href="https://api.whatsapp.com/send?phone=79142076094" target="_blank" rel="noopener" class="contacts__item">
+              <span class="contacts__item-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.256l-.999 3.648 3.969-1.001zm5.49-7.662c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </span>
+              <span>
+                <span class="contacts__item-label">WhatsApp</span>
+                <span class="contacts__item-value">Написать в WhatsApp</span>
+              </span>
+            </a>
+            <a href="tel:+79625871797" class="contacts__item">
+              <span class="contacts__item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </span>
+              <span>
+                <span class="contacts__item-label">Телефон</span>
+                <span class="contacts__item-value">+7 (962) 587-17-97</span>
+              </span>
+            </a>
+            <div class="contacts__item">
+              <span class="contacts__item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>
+                <span class="contacts__item-label">Адрес</span>
+                <span class="contacts__item-value">г. Хабаровск, ул. Лермонтова, 3, офис 103</span>
+              </span>
+            </div>
+            <div class="contacts__item">
+              <span class="contacts__item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
+              </span>
+              <span>
+                <span class="contacts__item-label">Часы работы</span>
+                <span class="contacts__item-value">Ежедневно, 10:00–19:00</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="contacts__socials">
+            <a href="https://api.whatsapp.com/send?phone=79142076094" target="_blank" rel="noopener" class="social social--wa">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.256l-.999 3.648 3.969-1.001zm5.49-7.662c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              WhatsApp
+            </a>
+            <a href="https://t.me/ArendaAvto_27" target="_blank" rel="noopener" class="social social--tg">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7L17.7 6c.3-.3-.1-.4-.5-.2L7.5 12.4l-4.5-1.4c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.1 1.6z"/></svg>
+              Telegram · Аренда
+            </a>
+            <a href="https://t.me/AVTOIMPORT27" target="_blank" rel="noopener" class="social social--tg">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7L17.7 6c.3-.3-.1-.4-.5-.2L7.5 12.4l-4.5-1.4c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.1 1.6z"/></svg>
+              Telegram · Выкуп
+            </a>
+            <a href="https://yandex.ru/maps/-/CTfGzVoS" target="_blank" rel="noopener" class="social">Яндекс Карты</a>
+          </div>
+        </div>
+
+        <form class="contacts__form" id="contactForm" novalidate>
+          <div class="field">
+            <label class="field__label" for="name">Имя</label>
+            <input class="field__input" type="text" id="name" name="name" placeholder="Как к вам обращаться" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label class="field__label" for="phone">Телефон</label>
+            <input class="field__input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required />
+          </div>
+          <div class="field">
+            <label class="field__label" for="comment">Комментарий</label>
+            <textarea class="field__input field__input--area" id="comment" name="comment" rows="3" placeholder="Какое авто рассматриваете, цель аренды (такси/прокат/выкуп) и т.д."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Отправить заявку</button>
+          <p class="contacts__form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          <div class="contacts__form-success" id="formSuccess" role="status" hidden>Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+      </div>
+      <div class="contacts__map-wrap reveal">
+        <iframe
+          class="contacts__map"
+          src="https://yandex.ru/map-widget/v1/?mode=search&text=%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%2C%203&z=16"
+          title="АрендаАвто27 на карте — ул. Лермонтова, 3, Хабаровск"
+          loading="lazy"
+          allow="fullscreen"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contacts__map-overlay">
+          <div class="contacts__map-pin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contacts__map-text">
+            <strong>АрендаАвто27</strong>
+            <span>ул. Лермонтова, 3, Хабаровск</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="logo">
+          <span class="logo__mark" aria-hidden="true">
+            <img src="assets/logo.png" alt="" class="logo__img" width="38" height="38" />
+          </span>
+          <span class="logo__text">Аренда<span class="logo__text--accent">Авто27</span></span>
+        </a>
+        <p class="footer__tagline">Аренда, прокат, аренда под выкуп и под такси в Хабаровске.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Подвал">
+        <a href="#advantages">Преимущества</a>
+        <a href="#services">Услуги</a>
+        <a href="#requirements">Условия</a>
+        <a href="#fleet">Автопарк</a>
+        <a href="#buyout">Выкуп авто</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="footer__copy">
+        <a href="tel:+79625871797" class="footer__phone">+7 (962) 587-17-97</a>
+        <p>© <span id="year"></span> АрендаАвто27. Все права защищены.</p>
+        <p class="footer__disclaimer">Точные условия аренды уточняйте по телефону.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
